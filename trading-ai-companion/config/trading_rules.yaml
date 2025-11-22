@@ -1,0 +1,62 @@
+# Trading Rules Configuration
+risk_management:
+  position_sizing:
+    method: "kelly_criterion"
+    max_position_size: 0.02
+    risk_per_trade: 0.01
+  
+  stop_losses:
+    atr_multiplier: 2.0
+    min_stop_distance: 10  # pips
+    max_stop_distance: 100  # pips
+  
+  take_profits:
+    risk_reward_ratio: 2.0
+    trailing_stop_enabled: true
+    trailing_stop_distance: 20  # pips
+
+trading_hours:
+  - start: "00:00"
+    end: "23:59"
+    timezone: "UTC"
+
+symbols:
+  major_pairs:
+    - "EURUSD"
+    - "GBPUSD"
+    - "USDJPY"
+    - "AUDUSD"
+    - "USDCAD"
+    - "USDCHF"
+  
+  restrictions:
+    max_positions: 10
+    max_exposure_per_pair: 0.05
+    max_correlation_exposure: 0.7
+
+indicators:
+  technical:
+    rsi:
+      period: 14
+      overbought: 70
+      oversold: 30
+    
+    macd:
+      fast_period: 12
+      slow_period: 26
+      signal_period: 9
+    
+    bollinger_bands:
+      period: 20
+      std_dev: 2
+
+sentiment:
+  news_sources:
+    - "reuters"
+    - "bloomberg"
+    - "financial_times"
+  
+  social_media:
+    - "twitter"
+    - "reddit"
+    - "forex_factory"

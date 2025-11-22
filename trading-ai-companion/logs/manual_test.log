@@ -1,0 +1,8 @@
+2025-11-22 14:54:48,699 - ManualTest - INFO - Starting manual test
+2025-11-22 14:54:48,699 - ManualTest - ERROR - Manual test failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-11-22 15:01:10,149 - ManualTest - INFO - Starting manual test
+2025-11-22 15:01:13,186 - ManualTest - ERROR - Manual test failed: No module named 'modules'
+2025-11-22 15:03:26,394 - ManualTest - INFO - Starting manual test
+2025-11-22 15:04:57,319 - ManualTest - INFO - Starting manual test
+2025-11-22 15:07:49,237 - ManualTest - INFO - Starting manual test
+2025-11-22 15:42:50,023 - ManualTest - INFO - Starting manual test

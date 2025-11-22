@@ -1,0 +1,38 @@
+# AI Model Configuration
+models:
+  ollama:
+    mistral:
+      capabilities: ["technical_analysis", "sentiment_analysis"]
+      speed: "fast"
+      context_length: 32768
+    llama2:
+      capabilities: ["strategy_generation", "risk_assessment"]
+      speed: "medium"
+      context_length: 4096
+    tinyllama:
+      capabilities: ["quick_insights"]
+      speed: "fast"
+      context_length: 2048
+    neural-chat:
+      capabilities: ["conversation"]
+      speed: "medium"
+      context_length: 4096
+
+  cloud:
+    openai:
+      gpt-3.5-turbo:
+        capabilities: ["text_generation", "reasoning"]
+        max_tokens: 4096
+      gpt-4:
+        capabilities: ["advanced_reasoning", "code_generation"]
+        max_tokens: 8192
+    
+    anthropic:
+      claude-2:
+        capabilities: ["analysis", "reasoning"]
+        max_tokens: 100000
+    
+    google:
+      gemini-pro:
+        capabilities: ["multimodal", "reasoning"]
+        max_tokens: 32768

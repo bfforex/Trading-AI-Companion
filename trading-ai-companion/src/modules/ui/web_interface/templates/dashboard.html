@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Trading AI Companion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Trading AI Companion Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="dashboard-grid">
+            <div class="card">
+                <h3>System Status</h3>
+                <div id="system-status">Loading...</div>
+            </div>
+            
+            <div class="card">
+                <h3>MT5 Connection</h3>
+                <div id="mt5-status">Loading...</div>
+            </div>
+            
+            <div class="card">
+                <h3>Active Models</h3>
+                <div id="models-status">Loading...</div>
+            </div>
+            
+            <div class="card">
+                <h3>Market Overview</h3>
+                <div id="market-overview">Loading...</div>
+            </div>
+        </section>
+        
+        <section class="trading-activity">
+            <h2>Recent Trading Activity</h2>
+            <div id="trading-activity">Loading...</div>
+        </section>
+    </main>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

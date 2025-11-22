@@ -1,0 +1,8 @@
+# MT5 Bridge Configuration
+bridge_path: "C:\\Users\\USER/AppData/Local/TradingAI/mt5_bridge"  # Double backslashes for YAML
+communication_method: "bridge"
+mt5:
+  auto_launch: true
+  mt5_executable_path: ""
+  api_base_url: "http://localhost:8082"
+  connection_timeout: 30

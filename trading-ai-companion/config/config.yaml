@@ -1,0 +1,62 @@
+# Application Configuration
+app:
+  name: "Trading AI Companion"
+  version: "1.0.0"
+  debug: false
+  log_level: "INFO"
+
+# Server Configuration
+server:
+  host: "localhost"
+  port: 8080
+  websocket_port: 8081
+
+# MT5 Configuration
+mt5:
+  auto_launch: true
+  mt5_executable_path: ""  # Auto-detect if empty
+  communication_method: "bridge"  # "api" or "bridge"
+  api_base_url: "http://localhost:8082"
+  api_key: ""  # Optional API key for authentication
+  bridge_path: ""  # Auto-detect if empty
+  connection_timeout: 30
+  close_positions_on_shutdown: false
+  cancel_orders_on_shutdown: false
+
+# AI Configuration
+ai:
+  default_provider: "ollama"
+  fallback_chain: ["ollama", "gemini", "openai"]
+  response_timeout: 60
+  max_concurrent_requests: 5
+
+# Risk Management
+risk:
+  max_position_size: 0.02  # 2% of portfolio
+  max_daily_loss: 0.05     # 5% of portfolio
+  max_drawdown: 0.10       # 10% drawdown limit
+  stop_loss_multiplier: 2.0
+
+# Data Processing
+data:
+  market_data_retention: 30  # days
+  update_frequency: 60       # seconds
+  technical_indicators:
+    - "rsi"
+    - "macd"
+    - "bollinger_bands"
+    - "ema"
+    - "sma"
+
+# Logging
+logging:
+  file: "logs/app.log"
+  max_size: "10MB"
+  backup_count: 5
+
+# Resource Monitoring
+monitoring:
+  cpu_threshold: 80.0
+  memory_threshold: 85.0
+  disk_threshold: 90.0
+  check_interval: 60  # seconds

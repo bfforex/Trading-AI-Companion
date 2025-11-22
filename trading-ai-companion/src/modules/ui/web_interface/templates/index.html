@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading AI Companion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Trading AI Companion</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="status-panel">
+            <h2>System Status</h2>
+            <div id="status-info">
+                <p>Loading status...</p>
+            </div>
+        </section>
+        
+        <section class="models-panel">
+            <h2>Available AI Models</h2>
+            <div id="models-list">
+                <p>Loading models...</p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

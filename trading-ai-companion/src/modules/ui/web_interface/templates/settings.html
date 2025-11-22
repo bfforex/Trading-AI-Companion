@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Trading AI Companion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Trading AI Companion Settings</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="settings-panel">
+            <h2>Configuration Settings</h2>
+            
+            <form id="settings-form">
+                <div class="setting-group">
+                    <h3>MT5 Configuration</h3>
+                    <label for="mt5-auto-launch">Auto Launch MT5:</label>
+                    <input type="checkbox" id="mt5-auto-launch" name="mt5-auto-launch">
+                    
+                    <label for="mt5-path">MT5 Executable Path:</label>
+                    <input type="text" id="mt5-path" name="mt5-path">
+                </div>
+                
+                <div class="setting-group">
+                    <h3>Risk Management</h3>
+                    <label for="max-position-size">Max Position Size (%):</label>
+                    <input type="number" id="max-position-size" name="max-position-size" step="0.1" min="0.1" max="10">
+                    
+                    <label for="max-daily-loss">Max Daily Loss (%):</label>
+                    <input type="number" id="max-daily-loss" name="max-daily-loss" step="0.1" min="0.1" max="10">
+                </div>
+                
+                <div class="setting-group">
+                    <h3>AI Configuration</h3>
+                    <label for="default-provider">Default AI Provider:</label>
+                    <select id="default-provider" name="default-provider">
+                        <option value="ollama">Ollama</option>
+                        <option value="gemini">Google Gemini</option>
+                        <option value="openai">OpenAI</option>
+                        <option value="claude">Anthropic Claude</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Save Settings</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
